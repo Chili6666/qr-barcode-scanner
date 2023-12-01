@@ -1,0 +1,49 @@
+:host {
+  display: block;
+}
+
+.scanner-container {
+  position: relative;
+  padding: 0.5rem;
+  width: 30rem;
+  background-color: aliceblue;
+  border-radius: 1rem;
+}
+
+video {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  vertical-align: bottom;
+  aspect-ratio: 5/3.8;
+}
+
+.laser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: 32rem;
+  height: 0.5rem;
+  border-radius: 1rem;
+  transform: translate(-1rem, 0);
+  -webkit-animation: scanning infinite ease-in-out 1s alternate;
+  animation: scanning infinite ease-in-out 1s alternate; 
+}
+
+@-webkit-keyframes scanning {
+  0% {
+    top: 10%
+  }
+  100%{
+    top:90%
+  }
+}
+@keyframes scanning {
+  0% {
+    top: 10%
+  }
+  100%{
+    top:90%
+  }
+}
