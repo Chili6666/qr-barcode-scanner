@@ -24,6 +24,12 @@ export class InfBarcodeScanner implements ComponentInterface {
     const ctx = canvas.getContext('2d');
     ctx.drawImage(this.scanner, 0, 0, width, height);
     const imgData = ctx.getImageData(0, 0, width, height);
+
+
+   //TODO PAOLA  I can not access the wasm file. check the console output. Maybe we have to use this lib here: https://www.npmjs.com/package/@rollup/plugin-wasm
+   //link to the barcode scan lib: https://github.com/undecaf/zbar-wasm/tree/master
+   
+
     const res = await scanImageData(imgData);
     // // console.log(res, Date.now());
     // this.renderOverlay(res);
